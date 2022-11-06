@@ -22,14 +22,23 @@ const Collections = () => {
   return (
     <>
       <Box px="" mt={5}>
-        <Flex flexDirection="row" justifyContent="space-between" px="80px">
-          <Text fontSize="32px" fontWeight="800" fontFamily="Helvetica Neue">
+        <Flex
+          flexDirection="row"
+          justifyContent="space-between"
+          px={["40px", "60px", "70px", "80px"]}
+        >
+          <Text
+            fontSize={["23px", "32px", "32px", "32px"]}
+            fontWeight="800"
+            mt={["8px", "0px", "0px", "0px"]}
+            fontFamily="Helvetica Neue"
+          >
             New this week
           </Text>
-          <Flex w="85px" justifyContent="space-between" mt={1}>
+          <Flex w="85px" justifyContent="space-between" mt={[2, 1, 1, 1]}>
             <Button
-              w="20px"
-              h="40px"
+              w={["10px", "20px", "20px", "20px"]}
+              h={["35px", "40px", "40px", "40px"]}
               pl={3}
               pb={1}
               borderRadius="full"
@@ -44,8 +53,8 @@ const Collections = () => {
               <ChevronLeftIcon mt={1} ml={1} h={6} w={6} />
             </Button>
             <Button
-              w="20px"
-              h="40px"
+              w={["10px", "20px", "20px", "20px"]}
+              h={["35px", "40px", "40px", "40px"]}
               pr={5}
               pb={1}
               borderRadius="full"
@@ -69,7 +78,7 @@ const Collections = () => {
         overflow="hidden"
         scrollBehavior="smooth"
       >
-        <Flex ml={12}>
+        <Flex ml={[3, 12, 12, 12]}>
           <Card
             img="https://a0.muscache.com/im/pictures/e35bb307-05f4-48a4-bdc5-3b2198bb9451.jpg?im_w=720"
             title="Most popular around the world"
