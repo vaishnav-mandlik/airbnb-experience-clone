@@ -7,15 +7,17 @@ const Navbar = () => {
       w="100%"
       h="80px"
       py="20px"
-      px="80px"
+      px={["40px", "60px", "70px", "80px"]}
       borderBottom="1px"
       borderColor="#ECECEC"
       justifyContent="space-between"
       flexDirection="row"
+      backgroundColor="white"
     >
       <Image
-        w="102px"
-        h="32px"
+        w={["80px", "102px", "102px", "102px"]}
+        h={["26px", "32px", "32px", "32px"]}
+        mt={["10px", "0px", "0px", "0px"]}
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png"
         cursor="pointer"
       ></Image>
@@ -27,7 +29,14 @@ const Navbar = () => {
           _hover={{ backgroundColor: "#f7f7f7" }}
           cursor="pointer"
         >
-          <Text pt="10px" fontSize="14px" px={2} fontWeight="600">
+          <Text
+            pt="10px"
+            fontSize={["11px", "14px", "14px", "14px"]}
+            px={2}
+            mt={["4px", "0px", "0px", "0px"]}
+            ml={["20px", "0px", "0px", "0px"]}
+            fontWeight="600"
+          >
             Beacome a host
           </Text>
         </Box>
