@@ -36,19 +36,29 @@ const Tags = () => {
   };
 
   return (
-    <Flex h="48px" mt={4} px="80px">
-      <Flex mt={2} pt={1} pr={3} borderRight="1px" borderColor="#DDDDDD">
+    <Flex
+      h={["40px", "48px", "48px", "48px"]}
+      mt={4}
+      px={["40px", "60px", "70px", "80px"]}
+    >
+      <Flex
+        mt={2}
+        pt={1}
+        pr={[1, 2, 3, 3]}
+        borderRight="1px"
+        borderColor="#DDDDDD"
+      >
         {filter.map((items) => (
           <Text
             w="auto"
-            h="31px"
+            h={["27px", "29px", "31px", "31px"]}
             border="1px"
             borderColor="#DDDDDD"
-            py="4px"
-            px="12px"
+            py={["2px", "4px", "4px", "4px"]}
+            px={["6px", "12px", "12px", "12px"]}
             borderRadius="30"
-            fontSize="14px"
-            mr={2}
+            fontSize={["12px", "12px", "14px", "14px"]}
+            mr={[1, 2, 2, 2]}
             cursor="pointer"
             _hover={{ borderColor: "black" }}
           >
@@ -57,8 +67,8 @@ const Tags = () => {
         ))}
       </Flex>
       <Box
-        w="30px"
-        h="30px"
+        w={["24px", "30px", "30px", "30px"]}
+        h={["24px", "30px", "30px", "30px"]}
         mt={3}
         ml={3}
         borderRadius="100"
@@ -67,7 +77,12 @@ const Tags = () => {
         cursor="pointer"
         onClick={onClickLeftHandler}
       >
-        <ChevronLeftIcon ml="1px" h={6} w={6} />
+        <ChevronLeftIcon
+          ml={["-1px", "1px", "1px", "1px"]}
+          mb={["5px", "", "", ""]}
+          h={[4, 6, 6, 6]}
+          w={[6, 6, 6, 6]}
+        />
       </Box>
       <Flex
         mt={2}
@@ -80,14 +95,13 @@ const Tags = () => {
         {tags.map((items) => (
           <Text
             position="relative"
-            // border="1px"
             w="auto"
-            h="31px"
+            h={["27px", "29px", "31px", "31px"]}
             backgroundColor="#F1F1F1"
             py="4px"
             px="12px"
             borderRadius="30"
-            fontSize="14px"
+            fontSize={["12px", "12px", "14px", "14px"]}
             mr={2}
             cursor="pointer"
           >
@@ -96,8 +110,8 @@ const Tags = () => {
         ))}
       </Flex>
       <Box
-        w="30px"
-        h="30px"
+        w={["24px", "30px", "30px", "30px"]}
+        h={["24px", "30px", "30px", "30px"]}
         mt={3}
         borderRadius="100"
         border="1px"
@@ -105,7 +119,12 @@ const Tags = () => {
         cursor="pointer"
         onClick={onClickRightHandler}
       >
-        <ChevronRightIcon mt={1} ml="1px" h={6} w={6} />
+        <ChevronRightIcon
+          mt={["-4px", 1, 1, 1]}
+          ml={["", "1px", "1px", "1px"]}
+          h={[4, 6, 6, 6]}
+          w={[6, 6, 6, 6]}
+        />
       </Box>
     </Flex>
   );
