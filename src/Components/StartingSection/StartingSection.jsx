@@ -42,7 +42,7 @@ const StartingSection = ({ endPt }) => {
 
   if (isLoaded) {
     return (
-      <Box h="432" px="80px">
+      <Box h="432" px={["40px", "60px", "70px", "80px"]}>
         <Flex justifyContent="space-between">
           <Skeleton height="20px" w="300px" mt={2} />
           <Flex>
@@ -65,10 +65,10 @@ const StartingSection = ({ endPt }) => {
     );
   }
   return (
-    <Box h="258px" px="80px">
+    <Box h="258px" px={["40px", "60px", "70px", "80px"]}>
       <Flex justifyContent="space-between">
         <Text
-          fontSize="22px"
+          fontSize={["15px", "20px", "22px", "22px"]}
           fontWeight="600
       "
         >
@@ -76,7 +76,14 @@ const StartingSection = ({ endPt }) => {
         </Text>
 
         <Flex justifyContent="space-between" w="150px">
-          <Text mr={4} fontSize="14px" fontWeight="600" as="u" mt={1}>
+          <Text
+            mr={4}
+            fontSize={["12px", "14px", "14px", "14px"]}
+            fontWeight="600"
+            as="u"
+            ml={[5, 0, 0, 0]}
+            mt={[1, 0, 0, 0]}
+          >
             Show({cardsNo})
           </Text>
           <Box
@@ -102,7 +109,35 @@ const StartingSection = ({ endPt }) => {
         </Flex>
       </Flex>
       <Flex>
-        <Swiper slidesPerView={3} spaceBetween={10}>
+        <Swiper
+          spaceBetween={10}
+          breakpoints={{
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 90,
+            },
+            425: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 130,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 270,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            1440: {
+              slidesPerView: 4,
+              spaceBetween: 240,
+            },
+          }}
+        >
           {post.map(
             ({ img, img2, location, people, price, rating, title, time }) => (
               <SwiperSlide>

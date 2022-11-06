@@ -42,7 +42,7 @@ const Sellers = ({ endPt, title, marg, smarg }) => {
 
   if (isLoaded) {
     return (
-      <Box h="432" mt={smarg} px="80px">
+      <Box h="432" mt={smarg} px={["40px", "60px", "70px", "80px"]}>
         <Flex justifyContent="space-between">
           <Skeleton height="20px" w="500px" mt={2} />
           <Flex>
@@ -81,10 +81,10 @@ const Sellers = ({ endPt, title, marg, smarg }) => {
   }
 
   return (
-    <Box h="432" mt={marg} px="80px">
+    <Box h="432" mt={marg} px={["40px", "60px", "70px", "80px"]}>
       <Flex justifyContent="space-between">
         <Text
-          fontSize="22px"
+          fontSize={["15px", "20px", "22px", "22px"]}
           fontWeight="600
       "
         >
@@ -92,7 +92,14 @@ const Sellers = ({ endPt, title, marg, smarg }) => {
         </Text>
 
         <Flex justifyContent="space-between" w="150px">
-          <Text mr={4} fontSize="14px" fontWeight="600" as="u" mt={1}>
+          <Text
+            mr={4}
+            fontSize={["12px", "14px", "14px", "14px"]}
+            fontWeight="600"
+            as="u"
+            mt={1}
+            ml={[2, 0, 0, 0]}
+          >
             Show({cardsNo})
           </Text>
           <Box
@@ -121,15 +128,27 @@ const Sellers = ({ endPt, title, marg, smarg }) => {
         <Swiper
           spaceBetween={10}
           breakpoints={{
+            375: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
             425: {
-              slidesPerView: 1,
-              spaceBetween: 30,
+              slidesPerView: 2,
+              spaceBetween: 5,
             },
             768: {
               slidesPerView: 3,
               spaceBetween: 10,
             },
             1024: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+            1280: {
+              slidesPerView: 6,
+              spaceBetween: 10,
+            },
+            1440: {
               slidesPerView: 6,
               spaceBetween: 10,
             },

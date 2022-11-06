@@ -5,11 +5,11 @@ import React, { useState } from "react";
 const Card = ({ img, img2, location, people, price, rating, title }) => {
   const [curretImg, setCurrentImg] = useState(img);
   return (
-    <Box w="180px" h="343px" borderRadius="15" cursor="pointer" mr={3}>
+    <Box w="225px" h="400px" borderRadius="15" cursor="pointer" mr={3}>
       <Box position="relative">
         <Image
-          h="240px"
-          w="180px"
+          h="290px"
+          w="225px"
           src={curretImg}
           borderRadius="15"
           _hover={{
@@ -23,7 +23,7 @@ const Card = ({ img, img2, location, people, price, rating, title }) => {
         <Image
           position="absolute"
           top="5px"
-          left="150px"
+          left="190px"
           src="https://img.icons8.com/material-outlined/25/FFFFFF/loading-heart.png"
         />
       </Box>
