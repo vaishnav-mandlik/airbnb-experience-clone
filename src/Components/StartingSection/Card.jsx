@@ -13,7 +13,7 @@ const Card = ({ img, img2, location, people, price, rating, title, time }) => {
 
   return (
     <Flex
-      w="365px"
+      w={["335px", "365px", "365px", "365px", "365px"]}
       h="169px"
       mt={4}
       borderRadius="15"
@@ -41,7 +41,7 @@ const Card = ({ img, img2, location, people, price, rating, title, time }) => {
       <Box>
         <Box>
           <Image
-            ml="220px"
+            ml={["190px", "220px", "220px", "220px"]}
             src="https://img.icons8.com/ios/20/000000/loading-heart.png"
           />
         </Box>
